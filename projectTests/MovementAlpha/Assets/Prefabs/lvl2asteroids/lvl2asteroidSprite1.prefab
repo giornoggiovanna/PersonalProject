@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7027210443412012294}
   - component: {fileID: 3329267698252788224}
   - component: {fileID: 6383318940730546200}
+  - component: {fileID: 4435854475497369281}
   m_Layer: 0
   m_Name: lvl2asteroidSprite1
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2843203731403381704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4, y: -2.44, z: 0}
+  m_LocalPosition: {x: 0, y: -2.44, z: 0}
   m_LocalScale: {x: 2, y: 1.978088, z: 1}
   m_Children:
   - {fileID: 201315668806806353}
@@ -73,12 +74,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5995873431416966595, guid: fee02fb78864b406aa6c2455f812553c, type: 3}
+  m_Sprite: {fileID: -5995873431416966595, guid: c802805a378424576b6c909cf3ee2114, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.25, y: 1.25}
+  m_Size: {x: 0.58, y: 0.62}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -97,9 +98,22 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.14011991, y: 0.039353225}
+  m_Offset: {x: -0.01, y: 0}
   serializedVersion: 2
   m_Radius: 0.2824844
+--- !u!114 &4435854475497369281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2843203731403381704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330a9dda439dc43dd81639ec8dd0bf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidHealth: 50
 --- !u!1 &3439700916723476487
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +211,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16687882, y: 0.049749255}
+  m_Offset: {x: 0.01, y: 0.03}
   serializedVersion: 2
   m_Radius: 0.30326998
 --- !u!114 &7691101061662233361
@@ -209,7 +223,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3439700916723476487}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9deb419eb7548399ff0f7176678760, type: 3}
+  m_Script: {fileID: 11500000, guid: 46ccd53cc67ea4d148300415a4953b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
+  damage: 10
