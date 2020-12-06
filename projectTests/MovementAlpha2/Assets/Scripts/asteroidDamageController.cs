@@ -19,7 +19,7 @@ public class asteroidDamageController : MonoBehaviour
     }
 
     //Dealing damage to the player
-    void OnTriggerEnter2D(Collider2D other) {
+    void OnTriggerStay2D(Collider2D other) {
         //Checking to see if it is the player
         if(other.tag == "Player"){
             PlayerHealth thePlayerHealth = other.gameObject.GetComponent<PlayerHealth> ();
