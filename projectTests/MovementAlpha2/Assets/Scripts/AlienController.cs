@@ -9,6 +9,7 @@ public class AlienController : MonoBehaviour
     public float alienMoveSpeed;
     public float alienDamage;
     public float alienHealth;
+    public Vector2 offset;
 
     //Private Variables
     bool isDead = false;
@@ -16,6 +17,7 @@ public class AlienController : MonoBehaviour
     //Components
     Rigidbody2D myRB;
     Transform Player;
+    Animator myAnim;
     
     //Public Functions
 
@@ -25,14 +27,26 @@ public class AlienController : MonoBehaviour
 
     void Start()
     {
+        myAnim = GetComponent<Animator>();
+        myAnim.Play("älien_passive");
         Player = GameObject.Find("Player").transform;
     }
 
     
     void Update()
     {
-        while(!isDead) {
-            transform.position = new Vector2(Player.position.x, Player.position.y + 1);
-        }
+        if (!isDead) {
+            
+            var target = new Vector2(Player.transform.position.x, transform.position.y);
+
+        // transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, .02f);
+            transform.position = Vector2.MoveTowards(transform.position, target, .02f);
+        
+
+        }        
+            
+            
+
+        
     }
 }

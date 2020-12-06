@@ -10,13 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3813192459667204442}
   - component: {fileID: 2647626192915869508}
-  - component: {fileID: 5418178159291629521}
   - component: {fileID: 1494200935701595401}
   - component: {fileID: 6421457625969447093}
-  - component: {fileID: 4022846669116488389}
-  - component: {fileID: 9180862981125318941}
-  - component: {fileID: 2768600287761679953}
-  - component: {fileID: 4437714537486999986}
+  - component: {fileID: 967622068}
   m_Layer: 0
   m_Name: gun-alien
   m_TagString: Untagged
@@ -33,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 35115858802012974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.91, y: 2.185, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -89,21 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5418178159291629521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35115858802012974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3686b04c7f30f4608a53cae605a28443, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  alienMoveSpeed: 0
-  alienDamage: 0
-  alienHealth: 0
 --- !u!50 &1494200935701595401
 Rigidbody2D:
   serializedVersion: 4
@@ -144,39 +125,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!70 &4022846669116488389
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35115858802012974}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.8025961, y: -1.3678398}
-  m_Size: {x: 2.234808, y: 2.33568}
-  m_Direction: 0
---- !u!70 &9180862981125318941
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35115858802012974}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.04, y: -1.3678398}
-  m_Size: {x: 2.234808, y: 2.33568}
-  m_Direction: 0
---- !u!70 &2768600287761679953
+--- !u!70 &967622068
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,22 +138,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.35}
-  m_Size: {x: 2.84, y: 0.0001}
+  m_Offset: {x: 0.01, y: 0.31}
+  m_Size: {x: 3.09, y: 2.73}
   m_Direction: 0
---- !u!58 &4437714537486999986
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35115858802012974}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3}
-  serializedVersion: 2
-  m_Radius: 1.75

@@ -17,7 +17,8 @@ public class PlayerHealth : MonoBehaviour
 
     //Makes the player take damage
     public void playerTakeDamage(float damage) {
-        //Telling that if the damamge or our current health is less than or equal to zero do nothing
+        print("hello");
+            //Telling that if the damamge or our current health is less than or equal to zero do nothing
         if (damage <= 0 || CurrentHealth <= 0)
             return;
 
