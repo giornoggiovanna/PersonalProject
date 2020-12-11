@@ -104,7 +104,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &1213442614224911521
@@ -148,6 +148,7 @@ MonoBehaviour:
   speed: 20
   myRB: {fileID: 997653719777855872}
   damage: 15
+  myAnim: {fileID: 0}
 --- !u!95 &890118956721960846
 Animator:
   serializedVersion: 3

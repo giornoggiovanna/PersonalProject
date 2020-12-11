@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 7149377512140100773}
   m_Layer: 0
   m_Name: gun-alien
-  m_TagString: Untagged
+  m_TagString: Alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,5 +253,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alienMoveSpeed: 5
   alienDamage: 25
-  alienHealth: 0
+  alienHealth: 50
   offset: {x: 0, y: 0}

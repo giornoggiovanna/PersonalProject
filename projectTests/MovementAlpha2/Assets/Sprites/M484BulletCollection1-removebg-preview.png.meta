@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: d60c285a0bd9d40ee9860ee87b3c571a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7226270833828934155
+    second: M484BulletCollection1-removebg-preview_0
+  - first:
+      213: -2276844521534452737
+    second: M484BulletCollection1-removebg-preview_1
+  - first:
+      213: -5336471460669036437
+    second: M484BulletCollection1-removebg-preview_2
+  - first:
+      213: -8132870600065962745
+    second: M484BulletCollection1-removebg-preview_3
+  - first:
+      213: -1135671583414213869
+    second: M484BulletCollection1-removebg-preview_4
+  - first:
+      213: -3969473390858298146
+    second: M484BulletCollection1-removebg-preview_5
+  - first:
+      213: 5620352102170174083
+    second: M484BulletCollection1-removebg-preview_6
+  - first:
+      213: 8464424782390731757
+    second: M484BulletCollection1-removebg-preview_7
+  - first:
+      213: -3369778153003596233
+    second: M484BulletCollection1-removebg-preview_8
+  - first:
+      213: 5893330318127979628
+    second: M484BulletCollection1-removebg-preview_9
+  - first:
+      213: -6892696857520950438
+    second: M484BulletCollection1-removebg-preview_10
+  - first:
+      213: -5050519421038215061
+    second: M484BulletCollection1-removebg-preview_11
+  - first:
+      213: -1783935045956583478
+    second: M484BulletCollection1-removebg-preview_12
+  - first:
+      213: 151815373392050726
+    second: M484BulletCollection1-removebg-preview_13
+  - first:
+      213: -6148659740315089333
+    second: M484BulletCollection1-removebg-preview_14
+  - first:
+      213: 6506624269680159613
+    second: M484BulletCollection1-removebg-preview_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +89,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +121,357 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 71
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02b325790fd84460800000000000000
+      internalID: 7226270833828934155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 71
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb052d88f50760e0800000000000000
+      internalID: -2276844521534452737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 71
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68efc8fa7b01f5b0800000000000000
+      internalID: -5336471460669036437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 71
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70da9de674d322f80800000000000000
+      internalID: -8132870600065962745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 51
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313271146b84d30f0800000000000000
+      internalID: -1135671583414213869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 51
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc96807bf899e8c0800000000000000
+      internalID: -3969473390858298146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 51
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382297285708ffd40800000000000000
+      internalID: 5620352102170174083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 51
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3a96e3e7da77570800000000000000
+      internalID: 8464424782390731757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 30
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736495aaf942c31d0800000000000000
+      internalID: -3369778153003596233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 30
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cde0c33b059c150800000000000000
+      internalID: 5893330318127979628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 30
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5333072ab83850a0800000000000000
+      internalID: -6892696857520950438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 30
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b604ec96853f8e9b0800000000000000
+      internalID: -5050519421038215061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 10
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf336307803e37e0800000000000000
+      internalID: -1783935045956583478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 10
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62af97a174b5b1200800000000000000
+      internalID: 151815373392050726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 10
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4606cd0b829baaa0800000000000000
+      internalID: -6148659740315089333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M484BulletCollection1-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 10
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ba839bc4c2c4a50800000000000000
+      internalID: 6506624269680159613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -49,4 +49,27 @@ public class AlienController : MonoBehaviour
 
         
     }
+
+    public void gunAlienTakeDamage (float damage)
+    {
+        alienHealth -= damage;
+        print (alienHealth);
+
+        if (alienHealth <= 0){
+
+            Die();
+            
+        }
+
+
+    }
+
+    void Die () 
+    {
+        Destroy(gameObject);
+        isDead = true;   
+
+    }
+
+
 }

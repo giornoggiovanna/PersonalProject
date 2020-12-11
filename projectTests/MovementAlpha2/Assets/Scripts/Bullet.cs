@@ -37,6 +37,13 @@ public class Bullet : MonoBehaviour
             asteroidHealth.asteroidTakeDamage(damage);
 
         }
+
+        if (enemy.tag == "World Edge")
+        {
+
+            Destroy(gameObject);
+
+        }
     }
 
     
