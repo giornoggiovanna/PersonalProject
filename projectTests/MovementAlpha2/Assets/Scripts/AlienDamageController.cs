@@ -29,7 +29,7 @@ public class AlienDamageController : MonoBehaviour
 
             print($"player health: {thePlayerHealth}");
             attackCooldown = 0f;
-            print($"enemies cooldown is {attackCooldown}");
+            //print($"enemies cooldown is {attackCooldown}");
 
             thePlayerHealth.playerTakeDamage(damage);
             //myAnimator.SetBool ("ïsAttacking", true);
@@ -58,7 +58,7 @@ public class AlienDamageController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print($"enemies cooldown is {attackCooldown}");
+        //print($"enemies cooldown is {attackCooldown}");
 
         attackCooldown = attackCooldown + Time.time;
         if(attackCooldown > 1000){

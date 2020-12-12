@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587606848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.122, y: 0, z: 0}
+  m_LocalPosition: {x: 0.312, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7812801375601064847}
@@ -45,6 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint1: {fileID: 587606849}
   bulletPrefab: {fileID: 3745392403229831172, guid: 17328f6e929e34603bfc778b2fa4a79a, type: 3}
+  AmmoSlider: {fileID: 0}
+  fullAmmo: 20
 --- !u!1 &7812801375601064851
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,8 +59,9 @@ GameObject:
   - component: {fileID: 7812801375601064846}
   - component: {fileID: 7812801375601064849}
   - component: {fileID: 7812801375601064848}
-  - component: {fileID: 6742112837946436701}
   - component: {fileID: 3419859980823220368}
+  - component: {fileID: 2078399320}
+  - component: {fileID: 2078399325}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -75,7 +78,7 @@ Transform:
   m_GameObject: {fileID: 7812801375601064851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.92, y: -0.19, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 587606849}
   m_Father: {fileID: 0}
@@ -121,12 +124,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1816424544686466085, guid: 9c0730668257343bda81d2687da2f3c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 66585fac7c2764b00ab81ac0a5cc58a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.21, y: 0.23}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -165,26 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847cda46ed5d84f169b3bcb9da62bc89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAnim: {fileID: 2078399325}
   MaxSpeed: 10
   IsColliding: 0
   isMoving: 0
   isDead: 0
---- !u!58 &6742112837946436701
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7812801375601064851}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.018822027, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.09617796
 --- !u!114 &3419859980823220368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,3 +187,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxPlayerHealth: 100
   playerDead: 0
+  damageIndicator: {fileID: 0}
+  HealthSlider: {fileID: 0}
+  endGameCanvas: {fileID: 0}
+  endGameText: {fileID: 0}
+--- !u!70 &2078399320
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812801375601064851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.49, y: 0.33}
+  m_Direction: 1
+--- !u!95 &2078399325
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812801375601064851}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d4c964ddf0dab42c79a411a98035c435, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

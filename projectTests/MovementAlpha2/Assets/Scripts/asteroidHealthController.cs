@@ -25,6 +25,12 @@ public class asteroidHealthController : MonoBehaviour
 
     //Private Functions
 
+    void Die() 
+    {
+
+        Destroy(gameObject);
+
+    }
   
 
     void Start()
@@ -34,6 +40,9 @@ public class asteroidHealthController : MonoBehaviour
    
     void Update()
     {
-        
+        if (asteroidHealth <= 0)
+        {
+            Die();
+        }
     }
 }
