@@ -1,0 +1,586 @@
+fileFormatVersion: 2
+guid: 4816a479f825b400eaff33da556c2a07
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8493895214850373165
+    second: powerup-removebg-preview_0
+  - first:
+      213: -1682127600870023070
+    second: powerup-removebg-preview_1
+  - first:
+      213: -6735056331964790738
+    second: powerup-removebg-preview_2
+  - first:
+      213: -2268601626063055351
+    second: powerup-removebg-preview_3
+  - first:
+      213: -2079896003649265356
+    second: powerup-removebg-preview_4
+  - first:
+      213: 5633982014627493059
+    second: powerup-removebg-preview_5
+  - first:
+      213: 2224800336144103602
+    second: powerup-removebg-preview_6
+  - first:
+      213: -1531557167652107090
+    second: powerup-removebg-preview_7
+  - first:
+      213: 5930545412613775448
+    second: powerup-removebg-preview_8
+  - first:
+      213: -1622327544754194598
+    second: powerup-removebg-preview_9
+  - first:
+      213: 1686602107603395392
+    second: powerup-removebg-preview_10
+  - first:
+      213: -1355526588442513838
+    second: powerup-removebg-preview_11
+  - first:
+      213: -5928541519609214402
+    second: powerup-removebg-preview_12
+  - first:
+      213: -4295366917627071823
+    second: powerup-removebg-preview_13
+  - first:
+      213: 2706446308964044081
+    second: powerup-removebg-preview_14
+  - first:
+      213: 8183253580720374613
+    second: powerup-removebg-preview_15
+  - first:
+      213: 4065843210604998457
+    second: powerup-removebg-preview_16
+  - first:
+      213: 2539920674745505017
+    second: powerup-removebg-preview_17
+  - first:
+      213: 8576130133780900944
+    second: powerup-removebg-preview_18
+  - first:
+      213: -7816109103918175185
+    second: powerup-removebg-preview_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: powerup-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 376
+        width: 119
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d9047ffd4f9f1a80800000000000000
+      internalID: -8493895214850373165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 382
+        width: 92
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 260234bfbd1e7a8e0800000000000000
+      internalID: -1682127600870023070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 390
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e284efe23f54882a0800000000000000
+      internalID: -6735056331964790738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 267
+        width: 104
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90653a537de4480e0800000000000000
+      internalID: -2268601626063055351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 276
+        width: 127
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4312bbcba99b223e0800000000000000
+      internalID: -2079896003649265356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 187
+        width: 127
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4bfcccaccef2e40800000000000000
+      internalID: 5633982014627493059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 185
+        width: 127
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8f9044e1410ee10800000000000000
+      internalID: 2224800336144103602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 95
+        width: 123
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac84ecded0debae0800000000000000
+      internalID: -1531557167652107090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 42
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850aa23a1a78d4250800000000000000
+      internalID: 5930545412613775448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 42
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57389981b55c79e0800000000000000
+      internalID: -1622327544754194598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 43
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043202d4ea3086710800000000000000
+      internalID: 1686602107603395392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 42
+        width: 31
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e694cefb3303de0800000000000000
+      internalID: -1355526588442513838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 10
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ac98f06e699bda0800000000000000
+      internalID: -5928541519609214402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 9
+        width: 43
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2bfd6db8ac364c0800000000000000
+      internalID: -4295366917627071823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 9
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d0871249a3f8520800000000000000
+      internalID: 2706446308964044081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 9
+        width: 31
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55308c166c1c09170800000000000000
+      internalID: 8183253580720374613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 8
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f6b88bbd6cc6830800000000000000
+      internalID: 4065843210604998457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 9
+        width: 64
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f450e7856c9f3320800000000000000
+      internalID: 2539920674745505017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 9
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ca88b1be8840770800000000000000
+      internalID: 8576130133780900944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerup-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 8
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ca2477e2a978390800000000000000
+      internalID: -7816109103918175185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -255,3 +255,4 @@ MonoBehaviour:
   alienDamage: 25
   alienHealth: 50
   offset: {x: 0, y: 0}
+  myRD: {fileID: 2647626192915869508}
