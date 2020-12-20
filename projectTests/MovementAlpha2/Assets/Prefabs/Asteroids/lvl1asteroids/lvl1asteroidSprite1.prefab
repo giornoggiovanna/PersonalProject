@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4135933379695734358}
   - component: {fileID: 4135933379695734356}
   - component: {fileID: 4135933379695734357}
-  - component: {fileID: 4135933379695734363}
+  - component: {fileID: 7896860405531611387}
   m_Layer: 0
   m_Name: dangerZone
   m_TagString: Untagged
@@ -97,10 +97,10 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16687882, y: 0.049749255}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.30326998
---- !u!114 &4135933379695734363
+--- !u!114 &7896860405531611387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,10 +109,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4135933379695734359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9deb419eb7548399ff0f7176678760, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c5205926848f44e98920fb9c416419e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
+  damage: 10
 --- !u!1 &4888118515391596824
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +124,9 @@ GameObject:
   - component: {fileID: 4135933378523590963}
   - component: {fileID: 4642285926336215912}
   - component: {fileID: 3610479094286161161}
+  - component: {fileID: 6610118743754895149}
+  - component: {fileID: 6548359137131458650}
+  - component: {fileID: 4865611067887304742}
   m_Layer: 0
   m_Name: lvl1asteroidSprite1
   m_TagString: Untagged
@@ -186,12 +189,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6945298545143806999, guid: fee02fb78864b406aa6c2455f812553c, type: 3}
+  m_Sprite: {fileID: -6945298545143806999, guid: c802805a378424576b6c909cf3ee2114, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.25, y: 1.25}
+  m_Size: {x: 0.59, y: 0.61}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -210,6 +213,58 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16746587, y: 0.03999999}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25513846
+--- !u!61 &6610118743754895149
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4888118515391596824}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 3}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.59, y: 0.61}
+    newSize: {x: 0.59, y: 0.61}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 8}
+  m_EdgeRadius: 0
+--- !u!114 &6548359137131458650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4888118515391596824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8138a259ac4949bca4d7fe4a93ac475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidHealth: 50
+--- !u!114 &4865611067887304742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4888118515391596824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 958e19c4b5745409eba6223db33c2012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}

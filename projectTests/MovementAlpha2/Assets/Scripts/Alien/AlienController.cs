@@ -14,6 +14,7 @@ public class AlienController : MonoBehaviour
     //Private Variables
     bool isDead = false;
     bool damaged = false;
+    bool followingPlayer = false;
 
     //Components
     Rigidbody2D myRB;
@@ -33,19 +34,35 @@ public class AlienController : MonoBehaviour
         Player = GameObject.Find("Player").transform;
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "Player")
+        {
+
+            print("RIP Caesar");
+
+            if (!isDead)
+            {
+
+                followingPlayer = true;
+                
+
+            }
+        }
+    }
+
+
+
     void Update()
     {
 
-        if (!isDead) {
-            
+        if (followingPlayer)
+        {
             var target = new Vector2(Player.transform.position.x, transform.position.y);
 
-        // transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, .02f);
-            transform.position = Vector2.MoveTowards(transform.position, target, .02f);
-        
+            // transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, .02f);
+            transform.position = Vector2.MoveTowards(transform.position, target, .08f);
 
-        }        
+        }
             
         if (damaged)
         {

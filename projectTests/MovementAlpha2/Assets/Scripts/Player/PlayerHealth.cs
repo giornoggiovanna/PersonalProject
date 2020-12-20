@@ -42,8 +42,15 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
+    public void LoseGame () {
+
+        endGameCanvas.alpha = 1;
+
+    }
+
     //Kills the player
     public void killPlayer() {
+        LoseGame();
         print("you are dead");
         playerDead = true;
         myAnimator.SetBool ("isDead", true);
