@@ -11,14 +11,19 @@ public class PlayerHealth : MonoBehaviour
     public Image damageIndicator;
     public Image HealthSlider;
     public CanvasGroup endGameCanvas;
-    public Text endGameText;
+    public Image winGameText;
+    public Image starNo1;
+    public Image starNo2;
+    public Image starNo3;
 
     //Private Variables
-    float CurrentHealth = 100;
+    public float CurrentHealth = 100;
     bool damaged = false;
     Animator myAnimator;
     Color flashColor = new Color (255f, 255f, 255f, 0.5f);
     float indicatorSpeed = 5f;
+    public GameObject gameCleaner;
+
 
     //Public Functions
 
@@ -42,9 +47,18 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
+    //Allows the player to lose the game
     public void LoseGame () {
 
+        //Allowing us to see end game screen
         endGameCanvas.alpha = 1;
+        
+        //Making the stuff you see when winning invisible
+        winGameText.color = new Color(1, 1, 1, 0);
+        starNo1.color = new Color(1, 1, 1, 0);
+        starNo2.color = new Color(1, 1, 1, 0);
+        starNo3.color = new Color(1, 1, 1, 0);
+
 
     }
 
@@ -58,14 +72,29 @@ public class PlayerHealth : MonoBehaviour
         
     }
 
-
-    //Private Functions
-    private void Start() {
-        myAnimator = GetComponent<Animator>();
-        HealthSlider.fillAmount = 1f;
+    public void healPlayer(float healAmount)
+    {
+        print("Get some health, would ya?");
+        CurrentHealth = CurrentHealth + healAmount;
     }
 
-    private void Update() {  
+
+    //Private Functions
+    private void Start()
+    {
+        //Finding our various components
+        myAnimator = GetComponent<Animator>();
+        HealthSlider.fillAmount = 1f;
+        GameCleaner gameCleanerScript = gameCleaner.GetComponent<GameCleaner>();
+    }
+
+    private void Update()
+    {
+        if (CurrentHealth > 100)
+        {
+            CurrentHealth = 100;
+        }
+        //Giving the player feedback when being damaged
         if (damaged)
         {
             damageIndicator.color = flashColor;

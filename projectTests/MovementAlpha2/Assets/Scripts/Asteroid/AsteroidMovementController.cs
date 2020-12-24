@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class AsteroidMovementController : MonoBehaviour
 {
+
+    public float asteroidSpeed;
+
     bool followingPlayer = false;
 
-    public Transform Player;
+    Transform Player;
 
+    //Finding the player
+    void Start()
+    {
+        Player = GameObject.Find("Player").transform;
+    }
 
+    //Checking to see if the player is within the following range
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player")
         {
@@ -17,11 +26,12 @@ public class AsteroidMovementController : MonoBehaviour
     }
     void Update()
     {
+        //Actually following the player
         if (followingPlayer)
         {
             var target = new Vector2(Player.transform.position.x, transform.position.y);
 
-            transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, .02f);
+            transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, asteroidSpeed);
         }
     }
 }

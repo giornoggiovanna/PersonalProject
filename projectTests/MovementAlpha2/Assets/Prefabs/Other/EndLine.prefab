@@ -134,5 +134,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuGroup: {fileID: 0}
+  endGameGroup: {fileID: 0}
+  winText: {fileID: 0}
+  loseText: {fileID: 0}
+  starNo1: {fileID: 0}
+  starNo2: {fileID: 0}
+  starNo3: {fileID: 0}
   playerGroup: {fileID: 0}
-  winGroup: {fileID: 0}
+  invisible: {r: 1, g: 1, b: 1, a: 0}
+  visible: {r: 1, g: 1, b: 1, a: 1}

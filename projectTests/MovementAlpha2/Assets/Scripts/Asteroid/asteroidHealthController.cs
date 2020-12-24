@@ -9,7 +9,7 @@ public class asteroidHealthController : MonoBehaviour
 
 
     //Private Variables
-
+    
 
     //Public Functions
 
@@ -25,10 +25,11 @@ public class asteroidHealthController : MonoBehaviour
 
     //Private Functions
 
+    //Killing the asteroid
     void Die() 
     {
 
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
 
     }
   
@@ -38,6 +39,7 @@ public class asteroidHealthController : MonoBehaviour
         
     }
    
+    //Checking to see if the asteroid is dead
     void Update()
     {
         if (asteroidHealth <= 0)

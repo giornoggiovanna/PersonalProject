@@ -7,34 +7,59 @@ using UnityEngine.UI;
 
 public class GameCleaner : MonoBehaviour
 {
-    public CanvasGroup menuGroup;
-    public CanvasGroup playerGroup;
-    public CanvasGroup winGroup;
 
+    //Public Variables
+    public CanvasGroup menuGroup;
+    public CanvasGroup endGameGroup;
+    public Image winText;
+    public Image loseText;
+    public Image starNo1;
+    public Image starNo2;
+    public Image starNo3;
+    public CanvasGroup playerGroup;
+    public Color invisible = new Color(1, 1, 1, 0);
+    public Color visible = new Color(1, 1, 1, 1);
+
+    //Private Variables
+
+    //Public Functions
+
+    //Allows the player to restart the game
     public void RestartGame()
     {
+        print("no, you may not restart the game");
         menuGroup.alpha = 0;
         SceneManager.LoadScene("Level1");
 
     }
 
+    //Allows the player to go back to the menu
     public void BackToMenu()
     {
+        print("no, you may not go back to the menu");
         playerGroup.alpha = 0;
         menuGroup.alpha = 1;
+        endGameGroup.alpha = 0;
+    
     }
 
+    //Allows the player to win the game
     public void WinGame()
     {
-        winGroup.alpha = 1;
+        loseText.color = invisible;
+
+        endGameGroup.alpha = 1;
     }
 
+    //Allows the player to exit the game
     public void ExitGame()
     {
         Application.Quit();
     }
 
+    //Private functions
 
+    //Checking to see if the player has won the game
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player")
         {
@@ -44,7 +69,8 @@ public class GameCleaner : MonoBehaviour
 
     void Start()
     {
-        menuGroup.alpha = 0;
+        //menuGroup.alpha = 1;
+        endGameGroup.alpha = 0;
     }
 
     void Update()

@@ -8,6 +8,7 @@ public class asteroidDamageController : MonoBehaviour
     public float damage;
     
 
+
     //Private Variables
     float attackCooldown;
     //Public Functions
@@ -18,6 +19,7 @@ public class asteroidDamageController : MonoBehaviour
     }
 
     // Update is called once per frame
+    //The attack cooldown for the asteroid
     void Update()
     {
         //print($"enemies cooldown is {attackCooldown}");
@@ -36,7 +38,7 @@ public class asteroidDamageController : MonoBehaviour
             //Dealing the actual damage
             thePlayerHealth.playerTakeDamage(damage);
             //Just checking if the function is working; not required
-            print(Time.time);
+            print($"The player health is: {thePlayerHealth.CurrentHealth}");
             attackCooldown = 0f;
         }
     }

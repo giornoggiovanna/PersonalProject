@@ -20,17 +20,18 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         //Firing the lasers
-        if (Input.GetButtonDown("Fire1") && currentAmmo > 0)
+        if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
 
+            //Taking away one ammo
             currentAmmo -= 1;
 
             AmmoSlider.fillAmount = currentAmmo / fullAmmo;
 
             print (currentAmmo);
         }
-        ammoReloadTime = ammoReloadTime;
+        ammoReloadTime = 1;
         print ($"Your reload time is: {ammoReloadTime}");
 
         // if (ammo <= 0)
@@ -57,6 +58,7 @@ public class Weapon : MonoBehaviour
         // ammoReloadTime = 0;
     }
 
+    //The shoot function
     void Shoot ()
     {
         Instantiate(bulletPrefab, firePoint1.position,firePoint1.rotation);
