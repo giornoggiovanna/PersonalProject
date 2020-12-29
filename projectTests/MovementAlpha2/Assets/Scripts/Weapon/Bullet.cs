@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour
     //Making the bullet move
     void Start()
     {
+       damage = 20; 
        myAnim = GetComponent<Animator>(); 
        myRB.velocity = transform.right * speed; 
     }
@@ -43,7 +44,6 @@ public class Bullet : MonoBehaviour
             asteroidHealthController asteroidHealth = enemy.gameObject.GetComponent<asteroidHealthController> ();
             //Dealing the damage
             asteroidHealth.asteroidTakeDamage(damage);
-            Destroy(gameObject);
 
             hittingEnemy = true;
 
@@ -53,13 +53,25 @@ public class Bullet : MonoBehaviour
         if (enemy.tag == "World Edge")
         {
 
-            Destroy(gameObject);
 
             hittingEnemy = true;
         }
     }
 
-    
+    public void increaseDamage(int amount)
+    {
+        print("Here have some extra damage");
+        damage = damage + amount;
+        print($"The players current damage is {damage}");
+    }
+
+    public void DestoryBullet()
+    {
+        Destroy(gameObject);
+    }
+
+
     // Update is called once per frame
-  
+    private void Update() {
+    }
 }

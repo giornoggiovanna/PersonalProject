@@ -34,7 +34,9 @@ public class asteroidDamageController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         //Checking to see if it is the player
         if(other.tag == "Player" && attackCooldown >= 500) {
-            PlayerHealth thePlayerHealth = other.gameObject.GetComponent<PlayerHealth> ();
+            PlayerHealth thePlayerHealth = other.gameObject.GetComponent<PlayerHealth>();
+
+            print($"{gameObject.name} has damaged the player");
             //Dealing the actual damage
             thePlayerHealth.playerTakeDamage(damage);
             //Just checking if the function is working; not required

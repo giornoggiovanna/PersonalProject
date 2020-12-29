@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour
             print (currentAmmo);
         }
         ammoReloadTime = 1;
-        print ($"Your reload time is: {ammoReloadTime}");
+        // print ($"Your reload time is: {ammoReloadTime}");
 
         // if (ammo <= 0)
         // {

@@ -34,12 +34,14 @@ public class PlayerHealth : MonoBehaviour
         if (damage <= 0 || CurrentHealth <= 0)
             return;
 
+        
+
         //Taking the actual damage
         CurrentHealth = CurrentHealth - damage;
         print($"The players current health is: {CurrentHealth}");
         damaged = true;
         
-        HealthSlider.fillAmount = CurrentHealth / MaxPlayerHealth;
+        
         //Tells to kill our player if the current health is equal to zero
         if(CurrentHealth <= 0){
             killPlayer();
@@ -76,6 +78,7 @@ public class PlayerHealth : MonoBehaviour
     {
         print("Get some health, would ya?");
         CurrentHealth = CurrentHealth + healAmount;
+        print($"The players new current health is {CurrentHealth}");
     }
 
 
@@ -90,6 +93,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
+        //Displaying the amount of health the player has
+        HealthSlider.fillAmount = CurrentHealth / MaxPlayerHealth;
+
+        //Capping the current health
         if (CurrentHealth > 100)
         {
             CurrentHealth = 100;

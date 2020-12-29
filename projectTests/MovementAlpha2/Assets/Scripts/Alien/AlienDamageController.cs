@@ -28,6 +28,7 @@ public class AlienDamageController : MonoBehaviour
             PlayerHealth thePlayerHealth = other.gameObject.GetComponent<PlayerHealth>();
             //Dealing the actual damage
             myAnimator.SetBool("isAttacking", true);
+            print($"{gameObject.name} has damaged the player");
 
 
             print($"player health: {thePlayerHealth}");

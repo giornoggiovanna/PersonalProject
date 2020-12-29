@@ -30,7 +30,6 @@ public class AlienController : MonoBehaviour
     void Start()
     {
         myAnim = GetComponent<Animator>();
-        myAnim.Play("alien_passive");
         //Finding the player
         Player = GameObject.Find("Player").transform;
     }
@@ -70,15 +69,15 @@ public class AlienController : MonoBehaviour
         }
         
         //Visually showing that there was damage dealt to the alien
-        if (damaged)
-        {
-            myRD.color = new Color (1, 0, 0, 1f);
+        // if (damaged)
+        // {
+        //     myRD.color = new Color (1, 0, 0, 1f);
 
-        }else
-        {
-            myRD.color = new Color (1, 1, 1, 1);
+        // }else
+        // {
+        //     myRD.color = new Color (1, 1, 1, 1);
 
-        } 
+        // } 
 
         
     }
@@ -87,13 +86,13 @@ public class AlienController : MonoBehaviour
     public void gunAlienTakeDamage (float damage)
     {
         alienHealth -= damage;
-        print (alienHealth);
+        print ($"The alien health is {alienHealth}");
         damaged = true;
 
         if (alienHealth <= 0){
 
-            Die();
-            
+            myAnim.SetBool("isDead", true);
+
         }
 
     }
