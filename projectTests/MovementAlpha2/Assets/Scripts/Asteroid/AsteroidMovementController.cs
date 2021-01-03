@@ -7,7 +7,7 @@ public class AsteroidMovementController : MonoBehaviour
 
     public float asteroidSpeed;
 
-    bool followingPlayer = false;
+    public bool followingPlayer = false;
 
     Transform Player;
 

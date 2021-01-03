@@ -9,60 +9,65 @@ public class Weapon : MonoBehaviour
     public Transform firePoint1;
     public GameObject bulletPrefab;
     public Image AmmoSlider;
-    int currentAmmo;
-    public int fullAmmo;
-    int ammoReloadTime = 1;
+    float currentAmmo;
+    public float fullAmmo;
+    float ammoReloadTime;
+    public AudioSource weaponAS;
+    public AudioClip playerFire;
 
     // Update is called once per frame
     private void Start() {
         currentAmmo = fullAmmo;
+        ammoReloadTime = 0;
     }
     void Update()
     {
         //Firing the lasers
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && currentAmmo > 0)
         {
             Shoot();
 
             //Taking away one ammo
             currentAmmo -= 1;
 
-            AmmoSlider.fillAmount = currentAmmo / fullAmmo;
+            
 
             print (currentAmmo);
         }
-        ammoReloadTime = 1;
+        
         // print ($"Your reload time is: {ammoReloadTime}");
 
-        // if (ammo <= 0)
-        // {
-
-            
-
-        //     print ($"Your reload time is {ammoReloadTime}");
-        //     if (ammoReloadTime >= 15f) 
-        //     {
-        //         ammo = fullAmmo;
-        //         ammoReloadTime = 0;
-        //     }
-        // }else if (ammo > 0)  
-        // {
-        //     ammoReloadTime = 0;
-        // }
-
-        if (ammoReloadTime > 15)
+        if (currentAmmo <= 0 || Input.GetButtonUp("Reload"))
         {
-            ammoReloadTime = 15;
+
+            ammoReloadTime += Time.deltaTime;
+            print ($"Your reload time is: {ammoReloadTime}");
+
+            if (ammoReloadTime >= 2) 
+            {
+                currentAmmo = fullAmmo;
+                ammoReloadTime = 0;
+            }
+        }else 
+        {
+            
         }
 
+        if (ammoReloadTime > 2)
+        {
+            ammoReloadTime = 2;
+        }
+
+        AmmoSlider.fillAmount = currentAmmo / 20;
         // ammoReloadTime = 0;
     }
 
     //The shoot function
     void Shoot ()
     {
+        print(currentAmmo);
         Instantiate(bulletPrefab, firePoint1.position,firePoint1.rotation);
-
+        weaponAS.Play();
     }
 
 }

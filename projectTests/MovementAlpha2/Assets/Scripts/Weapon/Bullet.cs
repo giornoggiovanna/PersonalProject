@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     public float damage;
     public Animator myAnim;
     bool hittingEnemy;
+    public GameObject endLine;
 
 
     // Start is called before the first frame update
@@ -23,19 +24,21 @@ public class Bullet : MonoBehaviour
     }
 
     //Checking to see if anything enters our trigger
-    private void OnTriggerEnter2D (Collider2D enemy) 
+    private void OnTriggerEnter2D(Collider2D enemy)
     {
+        GameCleaner gameCleaner = endLine.gameObject.GetComponent<GameCleaner>();
         print(enemy.name);
         myAnim.SetBool ("hittingEnemy", true);
 
         //Checking to see if it is an Alien
         if (enemy.tag == "Alien")
         {
-            AlienController alienController = enemy.gameObject.GetComponent<AlienController>();
+            gunAlienHealthController gunAlienHealthController = enemy.GetComponent<gunAlienHealthController>();
             //Dealing the damage
-            alienController.gunAlienTakeDamage(damage);
+            gunAlienHealthController.gunAlienTakeDamage(damage);
             Destroy(gameObject);
             hittingEnemy = true;
+            gameCleaner.amountOfPoints += 50;
         }
 
         //Checking to see if it is an asteroid
@@ -46,6 +49,7 @@ public class Bullet : MonoBehaviour
             asteroidHealth.asteroidTakeDamage(damage);
 
             hittingEnemy = true;
+            gameCleaner.amountOfPoints += 20;
 
         }
 

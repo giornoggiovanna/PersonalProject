@@ -149,6 +149,7 @@ MonoBehaviour:
   myRB: {fileID: 997653719777855872}
   damage: 20
   myAnim: {fileID: 890118956721960846}
+  endLine: {fileID: 4542169093979746242, guid: a9ce9dc5fe6d049e1bf5d071d23c7efa, type: 3}
 --- !u!95 &890118956721960846
 Animator:
   serializedVersion: 3

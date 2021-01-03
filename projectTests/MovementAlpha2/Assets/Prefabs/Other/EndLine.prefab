@@ -133,13 +133,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277ee47f618f14369bfc6c36699ea69a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuGroup: {fileID: 0}
   endGameGroup: {fileID: 0}
   winText: {fileID: 0}
   loseText: {fileID: 0}
   starNo1: {fileID: 0}
   starNo2: {fileID: 0}
   starNo3: {fileID: 0}
+  filledStarNo1: {fileID: 0}
+  filledStarNo2: {fileID: 0}
+  filledStarNo3: {fileID: 0}
   playerGroup: {fileID: 0}
   invisible: {r: 1, g: 1, b: 1, a: 0}
   visible: {r: 1, g: 1, b: 1, a: 1}
+  Player: {fileID: 0}
+  amountOfTimeLeftText: {fileID: 0}
+  amountOfTimeLeft: 0
+  amountOfPoints: 0

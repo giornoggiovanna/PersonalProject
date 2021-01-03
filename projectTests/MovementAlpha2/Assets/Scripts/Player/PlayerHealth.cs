@@ -23,7 +23,8 @@ public class PlayerHealth : MonoBehaviour
     Color flashColor = new Color (255f, 255f, 255f, 0.5f);
     float indicatorSpeed = 5f;
     public GameObject gameCleaner;
-
+    public AudioSource playerAS;
+    public AudioClip playerDeathClip;
 
     //Public Functions
 
@@ -37,21 +38,20 @@ public class PlayerHealth : MonoBehaviour
         
 
         //Taking the actual damage
-        CurrentHealth = CurrentHealth - damage;
+        CurrentHealth -= damage;
         print($"The players current health is: {CurrentHealth}");
         damaged = true;
         
         
         //Tells to kill our player if the current health is equal to zero
-        if(CurrentHealth <= 0){
-            killPlayer();
-        }
+        
 
     }
 
     //Allows the player to lose the game
     public void LoseGame () {
 
+        print("fly");
         //Allowing us to see end game screen
         endGameCanvas.alpha = 1;
         
@@ -71,7 +71,8 @@ public class PlayerHealth : MonoBehaviour
         playerDead = true;
         myAnimator.SetBool ("isDead", true);
         Destroy(gameObject);
-        
+        playerAS.PlayOneShot(playerDeathClip);
+
     }
 
     public void healPlayer(float healAmount)
@@ -85,6 +86,7 @@ public class PlayerHealth : MonoBehaviour
     //Private Functions
     private void Start()
     {
+        CurrentHealth = MaxPlayerHealth;
         //Finding our various components
         myAnimator = GetComponent<Animator>();
         HealthSlider.fillAmount = 1f;
@@ -93,6 +95,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
+        if (CurrentHealth <= 0)
+        {
+            killPlayer();
+        }
         //Displaying the amount of health the player has
         HealthSlider.fillAmount = CurrentHealth / MaxPlayerHealth;
 
