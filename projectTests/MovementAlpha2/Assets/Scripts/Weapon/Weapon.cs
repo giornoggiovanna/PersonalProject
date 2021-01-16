@@ -67,7 +67,7 @@ public class Weapon : MonoBehaviour
     {
         print(currentAmmo);
         Instantiate(bulletPrefab, firePoint1.position,firePoint1.rotation);
-        weaponAS.Play();
+        // weaponAS.Play();
     }
 
 }

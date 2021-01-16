@@ -31,39 +31,29 @@ public class GameCleaner : MonoBehaviour
     public AudioSource gameAS;
     public AudioClip gameBGMusic;
 
-    Scene level1;
+    // public Scene level1;
     Scene menuScene;
     Scene currentScene;
 
     //Private Variables
 
-    bool playerWonGame;
+    public bool playerWonGame;
     //Public Functions
 
     //Allows the player to restart the game
-    public void StartGame()
-    {
-        amountOfPoints = 0;
-        playerWonGame = false;
-        print("no, you may not start the game");
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.SetActiveScene(level1);
-        gameAS.Play();
-
-    }
 
     //Allows the player to go back to the menu
     public void BackToMenu()
     {
         print("no, you may not go back to the menu");
 
-        SceneManager.SetActiveScene(menuScene);
         SceneManager.LoadScene("MenuScene");
+        SceneManager.SetActiveScene(menuScene);
         // playerGroup.alpha = 0;
         // menuGroup.alpha = 1;
         // endGameGroup.alpha = 0;
-    
+
     }
 
     //Allows the player to win the game
@@ -122,7 +112,8 @@ public class GameCleaner : MonoBehaviour
     }
 
     //Checking to see if the player has won the game
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.tag == "Player")
         {
             WinGame();
@@ -131,13 +122,14 @@ public class GameCleaner : MonoBehaviour
 
     void Start()
     {
-        Scene menuScene = SceneManager.GetSceneByName("MenuScene");
-        Scene currentScene = SceneManager.GetActiveScene();
-        Scene level1 = SceneManager.GetSceneByName("Level1");
-        SceneManager.SetActiveScene(menuScene);
+        // menuScene = SceneManager.GetSceneByName("MenuScene");
 
-        SceneManager.LoadScene(0);
-        print(currentScene);
+
+        // currentScene = SceneManager.GetActiveScene();
+        // SceneManager.SetActiveScene(menuScene);
+
+        // SceneManager.LoadScene("MenuScene");
+        // print(currentScene);
         //menuGroup.alpha = 1;
         endGameGroup.alpha = 0;
     }
@@ -152,7 +144,7 @@ public class GameCleaner : MonoBehaviour
 
     void Update()
     {
-        amountOfTimeLeft = (int) (currentGameTime - maxGameTime) * -1;
+        amountOfTimeLeft = (int)(currentGameTime - maxGameTime) * -1;
         currentGameTime += Time.deltaTime;
         amountOfTimeLeftText.text = ($"Time Left = {amountOfTimeLeft}");
         // if (currentGameTime >= maxGameTime && !playerWonGame)
