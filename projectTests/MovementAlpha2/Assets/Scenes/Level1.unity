@@ -157,7 +157,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -235,11 +235,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &155367346 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3522609425638895841, guid: 9f88ab583e8aa47c681b1222d2a0462c, type: 3}
-  m_PrefabInstance: {fileID: 157450690}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &157450690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -296,9 +291,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3522609425638895850, guid: 9f88ab583e8aa47c681b1222d2a0462c, type: 3}
-      propertyPath: myAnim
+      propertyPath: bossBody
       value: 
-      objectReference: {fileID: 155367346}
+      objectReference: {fileID: 1000192334}
+    - target: {fileID: 9204127187328154384, guid: 9f88ab583e8aa47c681b1222d2a0462c, type: 3}
+      propertyPath: finalBossHealth
+      value: 
+      objectReference: {fileID: 637331692}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f88ab583e8aa47c681b1222d2a0462c, type: 3}
 --- !u!82 &184261033 stripped
@@ -433,6 +432,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &637331692 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9204127186226474883, guid: 9f88ab583e8aa47c681b1222d2a0462c, type: 3}
+  m_PrefabInstance: {fileID: 157450690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &651473388
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,6 +793,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &1000192334 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 9204127186226474886, guid: 9f88ab583e8aa47c681b1222d2a0462c, type: 3}
+  m_PrefabInstance: {fileID: 157450690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1006250766 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 458420948255126695, guid: bbd4071112af14e8a8ef0a2915964bd7, type: 3}
@@ -983,9 +992,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 587606850, guid: 6df485fc27f974cb7885f8b3b5c83265, type: 3}
+      propertyPath: weaponAS
+      value: 
+      objectReference: {fileID: 46464438}
+    - target: {fileID: 587606850, guid: 6df485fc27f974cb7885f8b3b5c83265, type: 3}
       propertyPath: AmmoSlider
       value: 
       objectReference: {fileID: 742105780}
+    - target: {fileID: 587606850, guid: 6df485fc27f974cb7885f8b3b5c83265, type: 3}
+      propertyPath: playerFire
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ecfdf4c0e8ed46f7ad4b519ecfd8c77, type: 3}
     - target: {fileID: 3419859980823220368, guid: 6df485fc27f974cb7885f8b3b5c83265, type: 3}
       propertyPath: starNo1
       value: 
@@ -1145,67 +1162,6 @@ PrefabInstance:
       objectReference: {fileID: 1006250766}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9601956cd0f8540679dceaf691c23af0, type: 3}
---- !u!1001 &1881926881
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8715949250101107545, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715949250101107545, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715949250101107545, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.7008147
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715949250101107545, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715949250101107545, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715949250101107545, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715949250101107545, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715949250101107545, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715949250101107545, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715949250101107545, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715949250101107545, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715949250101107546, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
-      propertyPath: m_Name
-      value: BossBorder
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715949250101107546, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
-      propertyPath: m_TagString
-      value: World Edge
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
 --- !u!114 &1946361138 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 611748670856700135, guid: 66277088d89e74ad190262fb3626e60f, type: 3}
@@ -1224,6 +1180,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 858218844, guid: bbd4071112af14e8a8ef0a2915964bd7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 458420948255126688, guid: bbd4071112af14e8a8ef0a2915964bd7, type: 3}
       propertyPath: m_Name
       value: Main Camera

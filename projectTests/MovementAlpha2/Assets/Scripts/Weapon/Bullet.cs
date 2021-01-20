@@ -52,6 +52,15 @@ public class Bullet : MonoBehaviour
             gameCleaner.amountOfPoints += 20;
 
         }
+        if (enemy.tag == "Boss")
+        {
+            bossHealth theBossHealth = enemy.gameObject.GetComponent<bossHealth>();
+            theBossHealth.bossTakeDamage((int)damage);
+            Destroy(gameObject);
+
+        }
+
+
 
         //Checking to see if it is the world border
         if (enemy.tag == "World Edge")

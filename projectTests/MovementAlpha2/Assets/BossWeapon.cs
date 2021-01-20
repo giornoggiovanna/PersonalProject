@@ -11,6 +11,7 @@ public class BossWeapon : MonoBehaviour
     float attackCoolDown;
     GameObject Player;
     public Animator myAnim;
+    public GameObject finalBossHealth;
 
 
     // Start is called before the first frame update
@@ -23,27 +24,31 @@ public class BossWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (attackCoolDown > 2)
+        bossHealth theBossHealth = finalBossHealth.GetComponent<bossHealth>();
+        if (!theBossHealth.isDead)
         {
-            attackCoolDown = 2;
-        }
-        if (canStartAttack)
-        {
-            attackCoolDown += Time.deltaTime;
-        }
-        if (attackCoolDown >= 2f)
-        {
-            myAnim.SetBool("isAttacking", true);
-            canStartAttack = false;
-            if (canFire)
+            if (attackCoolDown > 2)
             {
-                Instantiate(bossBullet, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(-90f, 90f)));
-                Instantiate(bossBullet, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(-90f, 90f)));
-                Instantiate(bossBullet, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(-90f, 90f)));
-                canFire = false;
-                attackCoolDown = 0;
+                attackCoolDown = 2;
             }
-            
-        }
+            if (canStartAttack)
+            {
+                attackCoolDown += Time.deltaTime;
+            }
+            if (attackCoolDown >= 2f)
+            {
+                myAnim.SetBool("isAttacking", true);
+                canStartAttack = false;
+                if (canFire)
+                {
+                    Instantiate(bossBullet, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(-50, 50)));
+                    Instantiate(bossBullet, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(-50, 50)));
+                    Instantiate(bossBullet, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(-50, 50)));
+                    canFire = false;
+                    attackCoolDown = 0;
+                }
+
+            }
+        }else return;
     }
 }

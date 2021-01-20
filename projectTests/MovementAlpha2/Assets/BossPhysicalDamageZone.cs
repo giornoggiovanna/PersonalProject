@@ -8,9 +8,11 @@ public class BossPhysicalDamageZone : MonoBehaviour
     public int damage;
     float damageCooldown;
     public Animator myAnim;
+    public CapsuleCollider2D bossBody;
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.tag == "Player" && damageCooldown >= 2)
+        bossHealth theBossHealth = GetComponentInChildren<bossHealth>();
+        if (other.tag == "Player" && damageCooldown >= 2 && !theBossHealth.isDead)
         {
             print($"{gameObject.name} has damaged the player");
 
@@ -18,7 +20,7 @@ public class BossPhysicalDamageZone : MonoBehaviour
             thePlayerHealth.playerTakeDamage(damage);
             damageCooldown = 0f;
 
-        }
+        }else return;
     }
 
     public void EnableFire()
@@ -36,6 +38,15 @@ public class BossPhysicalDamageZone : MonoBehaviour
         myAnim.SetBool("isAttacking", false);
 
     }
+    public void bossNotSolid()
+    {
+        bossBody.isTrigger = true;
+    }
+    void Die()
+    {
+        myAnim.SetBool("isDead", true);
+
+    }
     void Start()
     {
         Player = GameObject.Find("Player");
@@ -43,7 +54,12 @@ public class BossPhysicalDamageZone : MonoBehaviour
 
     void Update()
     {
+        bossHealth theBossHealth = GetComponentInChildren<bossHealth>();
 
+        if (theBossHealth.isDead)
+        {
+            Die();
+        }
         if (damageCooldown >= 2)
         {
             damageCooldown = 2;

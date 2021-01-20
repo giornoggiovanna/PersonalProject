@@ -9,6 +9,8 @@ TagManager:
   - AsteroidFollowBox
   - Asteroid
   - AlienFollowBox
+  - Boss
+  - Boss Bullet World Edge
   layers:
   - Default
   - TransparentFX

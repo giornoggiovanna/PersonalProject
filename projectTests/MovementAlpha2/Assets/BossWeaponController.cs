@@ -34,7 +34,7 @@ public class BossWeaponController : MonoBehaviour
             print($"the players health is {thePlayerHealth.CurrentHealth}");
         }
 
-        if (other.tag == "World Edge")
+        if (other.tag == "Boss Bullet World Edge")
         {
             Destroy(gameObject);
         }
