@@ -14,11 +14,12 @@ public class bossHealth : MonoBehaviour
     bool bossDamaged;
     float waitTime;
     bool startWaitTimer;
+    GameObject endLine;
     // Start is called before the first frame update
     void Start()
     {
         currentBossHealth = maxBossHealth;
-
+        endLine = GameObject.Find("EndLine");
     }
 
     public void bossTakeDamage(int damage)
@@ -26,32 +27,37 @@ public class bossHealth : MonoBehaviour
         currentBossHealth -= damage;
         bossDamaged = true;
         print($"the current boss health is: {currentBossHealth}");
-        myRenderer.color = damageColor;
-        startWaitTimer = true;
+        // myRenderer.color = damageColor;
+        // startWaitTimer = true;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (startWaitTimer)
+        if(isDead)
         {
-            waitTime = Time.smoothDeltaTime;
+            GameCleaner theGameCleaner = endLine.GetComponent<GameCleaner>();
+            theGameCleaner.WinGame();
+        }
+        // if (startWaitTimer)
+        // {
+        //     waitTime = Time.smoothDeltaTime;
 
-        }
-        print(waitTime);
-        bossDamaged = false;
-        if (waitTime == 0.5)
-        {
-            // myRenderer.color = Color.Lerp(myRenderer.color, originalColor, flashTime * Time.deltaTime);
-            myRenderer.color = originalColor;
-            waitTime = 0;
-            startWaitTimer = false;
-        }
-        if (waitTime > 0.5)
-        {
-            waitTime = (float)0.5;
-        }
+        // }
+        // print(waitTime);
+        // bossDamaged = false;
+        // if (waitTime == 0.5)
+        // {
+        //     myRenderer.color = Color.Lerp(myRenderer.color, originalColor, flashTime * Time.deltaTime);
+        //     myRenderer.color = originalColor;
+        //     waitTime = 0;
+        //     startWaitTimer = false;
+        // }
+        // if (waitTime > 0.5)
+        // {
+        //     waitTime = (float)0.5;
+        // }
 
         if (currentBossHealth <= 0)
         {

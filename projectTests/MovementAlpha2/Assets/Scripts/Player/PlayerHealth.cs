@@ -39,7 +39,6 @@ public class PlayerHealth : MonoBehaviour
 
         //Taking the actual damage
         CurrentHealth -= damage;
-        print($"The players current health is: {CurrentHealth}");
         damaged = true;
         
         
@@ -70,9 +69,14 @@ public class PlayerHealth : MonoBehaviour
         print("you are dead");
         playerDead = true;
         myAnimator.SetBool ("isDead", true);
-        Destroy(gameObject);
+        
         playerAS.PlayOneShot(playerDeathClip);
 
+    }
+
+    public void destroyPlayer()
+    {
+        Destroy(gameObject);
     }
 
     public void healPlayer(float healAmount)
@@ -95,6 +99,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
+        print($"The players current health is: {CurrentHealth}");
+
         if (CurrentHealth <= 0)
         {
             killPlayer();

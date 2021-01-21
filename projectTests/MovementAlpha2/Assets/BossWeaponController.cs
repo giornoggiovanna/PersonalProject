@@ -28,9 +28,9 @@ public class BossWeaponController : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            PlayerHealth thePlayerHealth = Player.GetComponent<PlayerHealth>();
+            PlayerHealth thePlayerHealth = other.GetComponent<PlayerHealth>();
             thePlayerHealth.playerTakeDamage(damage);
-            Destroy(gameObject);
+            // Destroy(gameObject);
             print($"the players health is {thePlayerHealth.CurrentHealth}");
         }
 
