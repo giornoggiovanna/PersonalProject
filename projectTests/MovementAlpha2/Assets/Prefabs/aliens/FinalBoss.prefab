@@ -427,6 +427,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossBorder
       objectReference: {fileID: 0}
+    - target: {fileID: 8715949250101107547, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
+      propertyPath: m_Points.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715949250101107547, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
+      propertyPath: m_Points.Array.data[0].x
+      value: -13.455854
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715949250101107547, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
+      propertyPath: m_Points.Array.data[0].y
+      value: -7.0332994
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715949250101107547, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
+      propertyPath: m_Points.Array.data[1].x
+      value: -13.413513
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715949250101107547, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
+      propertyPath: m_Points.Array.data[1].y
+      value: 3.0354574
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715949250101107547, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
+      propertyPath: m_Points.Array.data[2].x
+      value: -11.856506
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715949250101107547, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
+      propertyPath: m_Points.Array.data[2].y
+      value: 3.0414076
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715949250101107547, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
+      propertyPath: m_Points.Array.data[3].x
+      value: -2.11969
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715949250101107547, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
+      propertyPath: m_Points.Array.data[3].y
+      value: 3.0148818
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715949250101107547, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
+      propertyPath: m_Points.Array.data[4].x
+      value: -2.117834
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715949250101107547, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
+      propertyPath: m_Points.Array.data[4].y
+      value: -7.4172463
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6df9c17a57433456f9a788f702be6a43, type: 3}
 --- !u!4 &8715949248376649338 stripped

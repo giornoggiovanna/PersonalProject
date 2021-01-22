@@ -303,4 +303,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b5692dffb3f449eb660b87b5dc52c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blobAlienFollowBox: {fileID: 0}
+  blobAlienFollowBox: {fileID: 7106441054497379537, guid: 96d6b4a8a4194451ca3db09b974959b1, type: 3}

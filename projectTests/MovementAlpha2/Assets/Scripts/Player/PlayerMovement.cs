@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     //Components
     Rigidbody2D myRB;
-    public Animator myAnim;
+    AudioSource myAS;
 
     //Public Variables
     public float MaxSpeed;
@@ -23,12 +23,15 @@ public class PlayerMovement : MonoBehaviour
     {
         //Getting the necessary components
         myRB = GetComponent<Rigidbody2D> ();
-        myAnim = GetComponent<Animator>();
+        myAS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        
+        // print(thrusterAnim.GetBool("isMoving"));
         //Getting the different axis
         float moveX = Input.GetAxis ("Horizontal");
         float moveY = Input.GetAxis ("Vertical");
@@ -38,15 +41,16 @@ public class PlayerMovement : MonoBehaviour
         myRB.velocity = new Vector2(myRB.velocity.x, moveY * MaxSpeed);
 
         //Checking whether the player is moving on the horizontal axis or not
-        if (moveX > 0)
+        if (moveX != 0 || moveY != 0)
         {
+            
+            myAS.Play();
             //Telling the animator and the script that the player is moving.
             isMoving = true;
-            myAnim.SetBool ("isMoving", true);
-        }else 
+        }else
         {
+            myAS.Stop();
             isMoving = false;
-            myAnim.SetBool ("isMoving", false);
         }
         
     }

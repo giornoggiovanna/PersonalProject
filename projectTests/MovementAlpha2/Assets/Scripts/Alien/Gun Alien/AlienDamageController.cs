@@ -6,16 +6,15 @@ public class AlienDamageController : MonoBehaviour
 {
     //Public Variables
     public float damage;
-    public bool isAttacking;
-    public bool canAttack;
+    internal bool isAttacking;
+    internal bool canAttack;
 
     //Private Variables
-    float attackCooldown;
+    internal float attackCooldown;
     float nextDamage;
 
     //Components
-    public Animator myAnimator;
-    public GameObject Player;
+    GameObject Player;
     public AudioClip gunAudio;
     public AudioSource alienAS;
     //Public Functions
@@ -33,23 +32,14 @@ public class AlienDamageController : MonoBehaviour
         }
     }
 
-    public void enableAttack()
-    {
-        canAttack = true;
-    }
-
-    public void disableAttack()
-    {
-        canAttack = false;
-        attackCooldown = 0f;
-    }
+    
 
     void OnTriggerExit2D(Collider2D player)
     {
         //Checking to see if the player is not in the attack range, and choosing whether to be attacking accordingly
-        if (player.tag == "Player" && attackCooldown < 5 && isAttacking) {
+        if (player.tag == "Player" && isAttacking) {
             isAttacking = false;
-
+            canAttack = false;
         }
     }
 
@@ -57,7 +47,7 @@ public class AlienDamageController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Player = GameObject.Find("Player");
 
         nextDamage = Time.time;
     }
@@ -65,10 +55,10 @@ public class AlienDamageController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
+
+        print(isAttacking);
         if (!isAttacking)
         {
-            myAnimator.SetBool("isAttacking", false);
         }
         //print($"enemies cooldown is {attackCooldown}");
 
@@ -83,7 +73,6 @@ public class AlienDamageController : MonoBehaviour
         if (isAttacking)
         {
 
-            myAnimator.SetBool("isAttacking", true);
             alienAS.PlayOneShot(gunAudio);
             if (canAttack)
             {
@@ -105,13 +94,10 @@ public class AlienDamageController : MonoBehaviour
 
             } else {
                 isAttacking = false;
-                myAnimator.SetBool("isAttacking", false);
-            }
+        }
+
+        if(!canAttack) return;
     }
 
-    //Not supposed to be here, yes, I know.  However, due to complications with the animator, I had to do this unfortunantly.
-    void Die()
-    {
-        Destroy(gameObject);
-    }
+    
 }

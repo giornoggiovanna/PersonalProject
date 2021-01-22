@@ -27,7 +27,7 @@ public class healthPowerupController : MonoBehaviour
         if (other.tag == "Player")
         {
             print("I can see the player");
-            PlayerHealth thePlayerHealth = Player.GetComponent<PlayerHealth>();
+            PlayerHealth thePlayerHealth = other.GetComponent<PlayerHealth>();
             Instantiate(gatherParticle, transform.position, Quaternion.identity);
 
             thePlayerHealth.healPlayer(healAmount);

@@ -27,9 +27,11 @@ public class AlienController : MonoBehaviour
 
     void Start()
     {
+        followingPlayer = false;
         myAnim = GetComponent<Animator>();
         //Finding the player
         Player = GameObject.Find("Player").transform;
+        myAnim.SetBool("isDead", false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -46,11 +48,33 @@ public class AlienController : MonoBehaviour
             
         }
     }
+    public void enableAttack()
+    {
+        AlienDamageController theAlienDamageController = GetComponentInChildren<AlienDamageController>();
+        theAlienDamageController.canAttack = true;
+    }
+
+    public void disableAttack()
+    {
+        AlienDamageController theAlienDamageController = GetComponentInChildren<AlienDamageController>();
+
+        theAlienDamageController.canAttack = false;
+        theAlienDamageController.attackCooldown = 0f;
+    }
 
 
 
     void Update()
     {
+        AlienDamageController theAlienDamageController = GetComponentInChildren<AlienDamageController>();
+        if (theAlienDamageController.isAttacking)
+        {
+            myAnim.SetBool("isAttacking", true);
+        }
+        else
+        {
+            myAnim.SetBool("isAttacking", false);
+        }
 
         //Actually following the player
         if (followingPlayer)
@@ -61,7 +85,7 @@ public class AlienController : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, target, alienMoveSpeed);
 
         }
-        
+
         //Visually showing that there was damage dealt to the alien
         // if (damaged)
         // {
@@ -73,14 +97,21 @@ public class AlienController : MonoBehaviour
 
         // } 
 
-        
+        gunAlienHealthController theGunAlienHealth = GetComponentInChildren<gunAlienHealthController>();
+        if (theGunAlienHealth.isDead)
+        {
+            myAnim.SetBool("isDead", true);
+        }else return;
+
     }
 
-    //Actually dealing the damage to the alien
-    
 
-    //Killing the alien
-    
+
+    //Not supposed to be here, yes, I know.  However, due to complications with the animator, I had to do this unfortunantly.
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 
 
 }

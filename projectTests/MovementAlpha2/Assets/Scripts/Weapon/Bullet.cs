@@ -50,6 +50,7 @@ public class Bullet : MonoBehaviour
 
             hittingEnemy = true;
             gameCleaner.amountOfPoints += 20;
+            Destroy(gameObject);
 
         }
         if (enemy.tag == "Boss")

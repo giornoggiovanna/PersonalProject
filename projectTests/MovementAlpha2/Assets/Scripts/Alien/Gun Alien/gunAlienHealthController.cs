@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class gunAlienHealthController : MonoBehaviour
 {
-    bool isDead = false;
+    internal bool isDead = false;
     bool damaged = false;
     public float alienHealth;
-    public Animator myAnim;
     public void gunAlienTakeDamage(float damage)
     {
         alienHealth -= damage;
@@ -17,8 +16,7 @@ public class gunAlienHealthController : MonoBehaviour
         if (alienHealth <= 0)
         {
 
-            myAnim.SetBool("isDead", true);
-
+            isDead = true;
         }
 
     }

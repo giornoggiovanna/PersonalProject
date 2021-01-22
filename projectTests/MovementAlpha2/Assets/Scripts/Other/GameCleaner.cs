@@ -9,7 +9,7 @@ public class GameCleaner : MonoBehaviour
 {
 
     //Public Variables
-    const int maxGameTime = 10;
+    const int maxGameTime = 500;
     float currentGameTime;
 
     public CanvasGroup endGameGroup;
@@ -24,7 +24,8 @@ public class GameCleaner : MonoBehaviour
     public CanvasGroup playerGroup;
     public Color invisible = new Color(1, 1, 1, 0);
     public Color visible = new Color(1, 1, 1, 1);
-    public GameObject Player;
+    GameObject Player;
+    public GameObject FinalBoss;
     public Text amountOfTimeLeftText;
     public float amountOfTimeLeft;
     public int amountOfPoints;
@@ -108,7 +109,8 @@ public class GameCleaner : MonoBehaviour
 
     void StartBoss()
     {
-        SceneManager.LoadScene("FinalBoss");
+        Vector3 bossPos = new Vector3(1005, 0, 0);
+        Instantiate(FinalBoss, bossPos,Quaternion.identity);
     }
 
     //Checking to see if the player has won the game
@@ -116,12 +118,14 @@ public class GameCleaner : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            WinGame();
+
+            StartBoss();
         }
     }
 
     void Start()
     {
+        Player = GameObject.Find("Player");
         // menuScene = SceneManager.GetSceneByName("MenuScene");
 
 
@@ -147,10 +151,10 @@ public class GameCleaner : MonoBehaviour
         amountOfTimeLeft = (int)(currentGameTime - maxGameTime) * -1;
         currentGameTime += Time.deltaTime;
         amountOfTimeLeftText.text = ($"Time Left = {amountOfTimeLeft}");
-        // if (currentGameTime >= maxGameTime && !playerWonGame)
-        // {
-        //     PlayerHealth thePlayerHealth = Player.GetComponent<PlayerHealth>();
-        //     thePlayerHealth.LoseGame();
-        // }
+        if (currentGameTime >= maxGameTime && !playerWonGame)
+        {
+            PlayerHealth thePlayerHealth = Player.GetComponent<PlayerHealth>();
+            thePlayerHealth.LoseGame();
+        }
     }
 }

@@ -59,7 +59,7 @@ public class PlayerHealth : MonoBehaviour
         starNo1.color = new Color(1, 1, 1, 0);
         starNo2.color = new Color(1, 1, 1, 0);
         starNo3.color = new Color(1, 1, 1, 0);
-
+        Destroy(gameObject);
 
     }
 
@@ -99,7 +99,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-        print($"The players current health is: {CurrentHealth}");
+        // print($"The players current health is: {CurrentHealth}");
 
         if (CurrentHealth <= 0)
         {
