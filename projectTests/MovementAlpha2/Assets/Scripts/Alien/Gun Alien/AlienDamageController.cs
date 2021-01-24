@@ -73,7 +73,7 @@ public class AlienDamageController : MonoBehaviour
         if (isAttacking)
         {
 
-            alienAS.PlayOneShot(gunAudio);
+            // alienAS.PlayOneShot(gunAudio);
             if (canAttack)
             {
                 PlayerHealth thePlayerHealth = Player.GetComponent<PlayerHealth>();

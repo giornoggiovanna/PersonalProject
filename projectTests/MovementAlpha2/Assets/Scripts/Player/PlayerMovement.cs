@@ -44,14 +44,19 @@ public class PlayerMovement : MonoBehaviour
         if (moveX != 0 || moveY != 0)
         {
             
-            myAS.Play();
             //Telling the animator and the script that the player is moving.
             isMoving = true;
         }else
         {
-            myAS.Stop();
             isMoving = false;
         }
+
+        if(isMoving)
+        {
+            myAS.Stop();
+
+        }else myAS.Stop(); return;
+
         
     }
 }

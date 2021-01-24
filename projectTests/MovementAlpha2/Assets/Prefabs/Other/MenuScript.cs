@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour
 {
     public GameObject endLine;
+    Scene MainMenu;
 
     public void StartGame()
     {
@@ -40,6 +41,8 @@ public class MenuScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        MainMenu = SceneManager.GetSceneByName("MainScene");
+        SceneManager.SetActiveScene(MainMenu);
     }
 
     // Update is called once per frame

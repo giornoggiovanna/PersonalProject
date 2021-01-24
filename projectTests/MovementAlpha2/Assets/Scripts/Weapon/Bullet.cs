@@ -11,6 +11,8 @@ public class Bullet : MonoBehaviour
     public Animator myAnim;
     bool hittingEnemy;
     public GameObject endLine;
+    AudioSource bulletAS;
+    public AudioClip bulletHit;
 
 
     // Start is called before the first frame update
@@ -21,6 +23,7 @@ public class Bullet : MonoBehaviour
        damage = 20; 
        myAnim = GetComponent<Animator>(); 
        myRB.velocity = transform.right * speed; 
+       bulletAS = GetComponent<AudioSource>();
     }
 
     //Checking to see if anything enters our trigger
@@ -39,6 +42,7 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             hittingEnemy = true;
             gameCleaner.amountOfPoints += 50;
+            bulletAS.Play();
         }
 
         //Checking to see if it is an asteroid
@@ -51,6 +55,7 @@ public class Bullet : MonoBehaviour
             hittingEnemy = true;
             gameCleaner.amountOfPoints += 20;
             Destroy(gameObject);
+            bulletAS.Play();
 
         }
         if (enemy.tag == "Boss")
@@ -58,6 +63,7 @@ public class Bullet : MonoBehaviour
             bossHealth theBossHealth = enemy.gameObject.GetComponent<bossHealth>();
             theBossHealth.bossTakeDamage((int)damage);
             Destroy(gameObject);
+            bulletAS.Play();
 
         }
 

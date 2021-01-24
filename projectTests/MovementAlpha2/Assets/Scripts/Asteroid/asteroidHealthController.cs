@@ -9,7 +9,7 @@ public class asteroidHealthController : MonoBehaviour
 
 
     //Private Variables
-    
+    AudioSource myAS;
 
     //Public Functions
 
@@ -17,7 +17,7 @@ public class asteroidHealthController : MonoBehaviour
     public void asteroidTakeDamage(float laserWeaponDamage){
             asteroidHealth = asteroidHealth - laserWeaponDamage;
             print(asteroidHealth);
-            
+            myAS.Play();
         }
 
        
@@ -36,7 +36,7 @@ public class asteroidHealthController : MonoBehaviour
 
     void Start()
     {
-        
+        myAS = GetComponentInParent<AudioSource>();
     }
    
     //Checking to see if the asteroid is dead

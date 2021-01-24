@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class gunAlienHealthController : MonoBehaviour
 {
+    AudioSource myAS;
+    public AudioClip hurtAudio;
+    public AudioClip deadAudio;
     internal bool isDead = false;
     bool damaged = false;
     public float alienHealth;
@@ -12,10 +15,11 @@ public class gunAlienHealthController : MonoBehaviour
         alienHealth -= damage;
         print($"The alien health is {alienHealth}");
         damaged = true;
+        myAS.PlayOneShot(hurtAudio);
 
         if (alienHealth <= 0)
         {
-
+            myAS.PlayOneShot(deadAudio);
             isDead = true;
         }
 
@@ -25,7 +29,7 @@ public class gunAlienHealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        myAS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

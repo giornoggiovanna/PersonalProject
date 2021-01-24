@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentBossHealth: 50
-  maxBossHealth: 50
+  maxBossHealth: 200
   flashTime: 0.01
   isDead: 0
   myRenderer: {fileID: 3522609425638895846}

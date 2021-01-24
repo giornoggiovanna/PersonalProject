@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     public float fullAmmo;
     float ammoReloadTime;
     public AudioSource weaponAS;
+    public AudioClip noAmmo;
     public AudioClip playerFire;
 
     // Update is called once per frame
@@ -34,10 +35,13 @@ public class Weapon : MonoBehaviour
 
             print (currentAmmo);
         }
-        
+        if(Input.GetButtonDown("Fire1") && currentAmmo == 0) 
+        {
+            weaponAS.PlayOneShot(noAmmo);
+        }
         // print ($"Your reload time is: {ammoReloadTime}");
 
-        if (currentAmmo <= 0 || Input.GetButtonUp("Reload"))
+        if (currentAmmo <= 0 || Input.GetKeyUp("r"))
         {
 
             ammoReloadTime += Time.deltaTime;
@@ -67,7 +71,7 @@ public class Weapon : MonoBehaviour
     {
         print(currentAmmo);
         Instantiate(bulletPrefab, firePoint1.position,firePoint1.rotation);
-        // weaponAS.Play();
+        weaponAS.Play();
     }
 
 }

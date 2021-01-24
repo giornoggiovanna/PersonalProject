@@ -112,7 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f9e64a5de2f411b86a306c5b864aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   damage: 10
 --- !u!1 &8029471433374345537
 GameObject:
@@ -126,10 +125,9 @@ GameObject:
   - component: {fileID: 8029471433374345549}
   - component: {fileID: 8029471433374345539}
   - component: {fileID: 8029471433374345536}
-  - component: {fileID: 8029471433374345544}
-  - component: {fileID: 8029471433374345545}
   - component: {fileID: 1178466352}
-  - component: {fileID: 1178466351}
+  - component: {fileID: 2752915408196211411}
+  - component: {fileID: 173879234757953231}
   m_Layer: 0
   m_Name: blobAlien
   m_TagString: AlienFollowBox
@@ -149,6 +147,7 @@ Transform:
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 99735855}
+  - {fileID: 7444252298596022277}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -238,38 +237,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8029471433374345544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8029471433374345537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4dd19add1b6440697cb5e95632ee0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 50
-  canDealDamage: 0
-  Player: {fileID: 0}
-  myAnim: {fileID: 8029471433374345536}
---- !u!58 &8029471433374345545
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8029471433374345537}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 3.14
 --- !u!50 &1178466352
 Rigidbody2D:
   serializedVersion: 4
@@ -291,7 +258,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &1178466351
+--- !u!58 &2752915408196211411
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029471433374345537}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 6.66
+--- !u!114 &173879234757953231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,7 +283,71 @@ MonoBehaviour:
   m_GameObject: {fileID: 8029471433374345537}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69b5692dffb3f449eb660b87b5dc52c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d07eb558f89f42f992a3b798214714e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blobAlienFollowBox: {fileID: 7106441054497379537, guid: 96d6b4a8a4194451ca3db09b974959b1, type: 3}
+  blobAlienSpeed: 0.04
+  myRB: {fileID: 1178466352}
+  player: {fileID: 7812801375601064851, guid: 6df485fc27f974cb7885f8b3b5c83265, type: 3}
+--- !u!1 &8800975067595226184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7444252298596022277}
+  - component: {fileID: 32494919758865039}
+  - component: {fileID: 5070660041849896260}
+  m_Layer: 0
+  m_Name: blobAlienDamageZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7444252298596022277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8800975067595226184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8029471433374345548}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &32494919758865039
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8800975067595226184}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.15
+--- !u!114 &5070660041849896260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8800975067595226184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4dd19add1b6440697cb5e95632ee0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
+  canDealDamage: 0

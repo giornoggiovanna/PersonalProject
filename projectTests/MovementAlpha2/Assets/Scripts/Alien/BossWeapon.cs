@@ -6,19 +6,19 @@ public class BossWeapon : MonoBehaviour
 {
 
     public bool canFire = false;
-    public bool canStartAttack;
+    internal bool canStartAttack;
     public GameObject bossBullet;
     float attackCoolDown;
     GameObject Player;
     public Animator myAnim;
-    public GameObject finalBossHealth;
+    GameObject finalBossHealth;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        canStartAttack = false;
         Player = GameObject.Find("Player");
+        finalBossHealth = GameObject.Find("finalBossHealth");
     }
 
     // Update is called once per frame

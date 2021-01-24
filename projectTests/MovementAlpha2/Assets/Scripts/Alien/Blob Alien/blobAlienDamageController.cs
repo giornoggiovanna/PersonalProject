@@ -7,22 +7,22 @@ public class blobAlienDamageController : MonoBehaviour
     public float damage;
     public bool canDealDamage = false;
 
-    public GameObject Player;
-    public Animator myAnim;
+  
 
     int attackCooldown;
-
+    internal bool isAttacking;
+    bool playerInsideBlastRadius;
 
     private void OnTriggerStay2D(Collider2D other) {
         if (other.tag == "Player")
         {
-            myAnim.SetBool("isAttacking", true);
-
-            if (canDealDamage && attackCooldown == 0)
+            playerInsideBlastRadius = true;
+            isAttacking = true;
+            if (canDealDamage && attackCooldown == 0 && playerInsideBlastRadius)
             {
                 print($"{gameObject.name} has damaged the player");
 
-                PlayerHealth thePlayerHealth = Player.GetComponent<PlayerHealth>();
+                PlayerHealth thePlayerHealth = other.GetComponent<PlayerHealth>();
                 thePlayerHealth.playerTakeDamage(damage);
                 attackCooldown = 1;
 
@@ -30,15 +30,14 @@ public class blobAlienDamageController : MonoBehaviour
         }
     }
 
-    public void enableAttack()
-    {
-        canDealDamage = true;
+    private void OnTriggerExit2D(Collider2D other) {
+        if(other.tag == "Player")
+        {
+            playerInsideBlastRadius = false;
+        }
     }
 
-    public void killBlobAlien()
-    {
-        Destroy(gameObject);
-    }
+    
     void Start()
     {
         
@@ -47,6 +46,6 @@ public class blobAlienDamageController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        print(isAttacking);
     }
 }

@@ -11,6 +11,7 @@ public class GameCleaner : MonoBehaviour
     //Public Variables
     const int maxGameTime = 500;
     float currentGameTime;
+    bool spawnedBoss;
 
     public CanvasGroup endGameGroup;
     public Image winText;
@@ -110,7 +111,10 @@ public class GameCleaner : MonoBehaviour
     void StartBoss()
     {
         Vector3 bossPos = new Vector3(1005, 0, 0);
+        if(!spawnedBoss){
         Instantiate(FinalBoss, bossPos,Quaternion.identity);
+        spawnedBoss = true;
+        }
     }
 
     //Checking to see if the player has won the game
@@ -148,6 +152,14 @@ public class GameCleaner : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetButtonDown("Cancel"))
+        {
+            Application.Quit();
+        }
+        // if("Level1" == SceneManager.GetActiveScene().name)
+        // {
+        //     gameAS.Play();
+        // }
         amountOfTimeLeft = (int)(currentGameTime - maxGameTime) * -1;
         currentGameTime += Time.deltaTime;
         amountOfTimeLeftText.text = ($"Time Left = {amountOfTimeLeft}");

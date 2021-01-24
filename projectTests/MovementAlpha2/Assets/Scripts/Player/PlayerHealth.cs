@@ -41,7 +41,7 @@ public class PlayerHealth : MonoBehaviour
         CurrentHealth -= damage;
         damaged = true;
         
-        
+        playerAS.Play();
         //Tells to kill our player if the current health is equal to zero
         
 

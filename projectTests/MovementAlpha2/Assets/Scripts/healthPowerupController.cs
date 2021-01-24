@@ -8,10 +8,12 @@ public class healthPowerupController : MonoBehaviour
     public float healAmount;
     public GameObject Player;
     public ParticleSystem gatherParticle;
+    AudioSource myAS;
+    bool enteredPlayer;
 
     void Start()
     {
-        
+        myAS = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -19,20 +21,21 @@ public class healthPowerupController : MonoBehaviour
         {
             PlayerHealth thePlayerHealth = Player.GetComponent<PlayerHealth>();
             Instantiate(gatherParticle, transform.position, Quaternion.identity);
-
             thePlayerHealth.healPlayer(healAmount);
-            Destroy(gameObject);
+            myAS.Play();
 
+
+            enteredPlayer = true;
         }
         if (other.tag == "Player")
         {
             print("I can see the player");
             PlayerHealth thePlayerHealth = other.GetComponent<PlayerHealth>();
             Instantiate(gatherParticle, transform.position, Quaternion.identity);
-
             thePlayerHealth.healPlayer(healAmount);
-            Destroy(gameObject);
+            myAS.Play();
 
+            enteredPlayer = true;
         }
     }
 
@@ -40,6 +43,10 @@ public class healthPowerupController : MonoBehaviour
 
     void Update()
     {
-        
+        if(!myAS.isPlaying && enteredPlayer)
+        {
+            Destroy(gameObject);
+
+        }else return;
     }
 }
